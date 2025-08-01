@@ -9,13 +9,27 @@ use Illuminate\Support\Facades\Storage;
 
 class DailyLogController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $user = Auth::user();
-        $logs = DailyLog::with('user')
-            ->where('user_id', $user->id)
-            ->orderBy('log_date', 'desc')
-            ->paginate(10);
+        $query = DailyLog::with('user')
+            ->where('user_id', $user->id);
+
+        // Filter by status
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+
+        // Filter by date range
+        if ($request->filled('date_from')) {
+            $query->where('log_date', '>=', $request->date_from);
+        }
+
+        if ($request->filled('date_to')) {
+            $query->where('log_date', '<=', $request->date_to);
+        }
+
+        $logs = $query->orderBy('log_date', 'desc')->paginate(10);
 
         return view('pages.daily-log.index', compact('logs'));
     }
@@ -121,16 +135,34 @@ class DailyLogController extends Controller
             ->with('success', 'Log harian berhasil dihapus.');
     }
 
-    public function verification()
+    public function verification(Request $request)
     {
         $user = Auth::user();
-
         $subordinateIds = $user->subordinates->pluck('id');
 
-        $logs = DailyLog::with('user')
-            ->whereIn('user_id', $subordinateIds)
-            ->orderBy('log_date', 'desc')
-            ->paginate(10);
+        $query = DailyLog::with('user')
+            ->whereIn('user_id', $subordinateIds);
+
+        // Filter by user
+        if ($request->filled('user_id')) {
+            $query->where('user_id', $request->user_id);
+        }
+
+        // Filter by status
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+
+        // Filter by date range
+        if ($request->filled('date_from')) {
+            $query->where('log_date', '>=', $request->date_from);
+        }
+
+        if ($request->filled('date_to')) {
+            $query->where('log_date', '<=', $request->date_to);
+        }
+
+        $logs = $query->orderBy('log_date', 'desc')->paginate(10);
 
         return view('pages.daily-log.verification', compact('logs'));
     }

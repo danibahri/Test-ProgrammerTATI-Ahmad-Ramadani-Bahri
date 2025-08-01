@@ -4,7 +4,6 @@
 
 @section('content')
     <div class="mt-14 space-y-6 p-4 sm:ml-64">
-        <!-- Header -->
         <div class="rounded-lg bg-white p-6 shadow">
             <div>
                 <h1 class="text-2xl font-bold text-gray-900">Verifikasi Log Harian Bawahan</h1>
@@ -12,7 +11,6 @@
             </div>
         </div>
 
-        <!-- Statistics Cards -->
         <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
             @php
                 $subordinateIds = auth()->user()->subordinates->pluck('id');
@@ -56,7 +54,6 @@
             </div>
         </div>
 
-        <!-- Filters -->
         <div class="rounded-lg bg-white p-6 shadow">
             <form method="GET" action="{{ route('daily-log.verification') }}"
                 class="grid grid-cols-1 gap-4 md:grid-cols-5">
@@ -106,7 +103,6 @@
             </form>
         </div>
 
-        <!-- Daily Logs List -->
         <div class="rounded-lg bg-white shadow">
             @if ($logs->count() > 0)
                 <div class="overflow-x-auto">
@@ -213,7 +209,6 @@
                     </table>
                 </div>
 
-                <!-- Pagination -->
                 <div class="border-t border-gray-200 px-6 py-4">
                     {{ $logs->links() }}
                 </div>
@@ -227,7 +222,6 @@
         </div>
     </div>
 
-    <!-- Verification Modal -->
     <div id="verificationModal" class="fixed inset-0 z-40 hidden bg-gray-600 bg-opacity-50">
         <div class="flex min-h-screen items-center justify-center px-4">
             <div class="w-full max-w-md rounded-lg bg-white shadow-xl">

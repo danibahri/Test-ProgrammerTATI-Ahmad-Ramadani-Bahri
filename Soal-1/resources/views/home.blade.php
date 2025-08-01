@@ -4,7 +4,6 @@
 
 @section('content')
     <div class="min-h-screen">
-        <!-- Hero Section -->
         <section class="gradient-bg relative text-white">
             <div class="absolute inset-0 bg-black bg-opacity-10"></div>
             <div class="container relative mx-auto px-4 py-20">
@@ -38,17 +37,8 @@
                 </div>
             </div>
 
-            <!-- Wave Shape -->
-            <div class="absolute bottom-0 left-0 right-0">
-                <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
-                        fill="white" />
-                </svg>
-            </div>
         </section>
 
-        <!-- Features Section -->
         <section id="features" class="bg-white py-20">
             <div class="container mx-auto px-4">
                 <div class="mb-16 text-center">
@@ -60,7 +50,6 @@
                 </div>
 
                 <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    <!-- Feature 1 -->
                     <div
                         class="rounded-xl border border-gray-100 bg-white p-8 shadow-lg transition duration-300 hover:shadow-xl">
                         <div class="mb-6 flex h-16 w-16 items-center justify-center rounded-lg bg-blue-100">
@@ -73,7 +62,6 @@
                         </p>
                     </div>
 
-                    <!-- Feature 2 -->
                     <div
                         class="rounded-xl border border-gray-100 bg-white p-8 shadow-lg transition duration-300 hover:shadow-xl">
                         <div class="mb-6 flex h-16 w-16 items-center justify-center rounded-lg bg-green-100">
@@ -86,7 +74,6 @@
                         </p>
                     </div>
 
-                    <!-- Feature 3 -->
                     <div
                         class="rounded-xl border border-gray-100 bg-white p-8 shadow-lg transition duration-300 hover:shadow-xl">
                         <div class="mb-6 flex h-16 w-16 items-center justify-center rounded-lg bg-purple-100">
@@ -99,7 +86,6 @@
                         </p>
                     </div>
 
-                    <!-- Feature 4 -->
                     <div
                         class="rounded-xl border border-gray-100 bg-white p-8 shadow-lg transition duration-300 hover:shadow-xl">
                         <div class="mb-6 flex h-16 w-16 items-center justify-center rounded-lg bg-yellow-100">
@@ -112,7 +98,6 @@
                         </p>
                     </div>
 
-                    <!-- Feature 5 -->
                     <div
                         class="rounded-xl border border-gray-100 bg-white p-8 shadow-lg transition duration-300 hover:shadow-xl">
                         <div class="mb-6 flex h-16 w-16 items-center justify-center rounded-lg bg-red-100">
@@ -125,7 +110,6 @@
                         </p>
                     </div>
 
-                    <!-- Feature 6 -->
                     <div
                         class="rounded-xl border border-gray-100 bg-white p-8 shadow-lg transition duration-300 hover:shadow-xl">
                         <div class="mb-6 flex h-16 w-16 items-center justify-center rounded-lg bg-indigo-100">
@@ -141,7 +125,6 @@
             </div>
         </section>
 
-        <!-- Workflow Section -->
         <section class="bg-gray-50 py-20">
             <div class="container mx-auto px-4">
                 <div class="mb-16 text-center">
@@ -152,7 +135,6 @@
                 </div>
 
                 <div class="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-3">
-                    <!-- Step 1 -->
                     <div class="text-center">
                         <div
                             class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-blue-600 text-2xl font-bold text-white">
@@ -166,12 +148,10 @@
                         </p>
                     </div>
 
-                    <!-- Arrow 1 -->
                     <div class="hidden items-center justify-center md:flex">
                         <i class="fas fa-arrow-right text-3xl text-gray-400"></i>
                     </div>
 
-                    <!-- Step 2 -->
                     <div class="text-center">
                         <div
                             class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-green-600 text-2xl font-bold text-white">
@@ -184,12 +164,10 @@
                         </p>
                     </div>
 
-                    <!-- Arrow 2 -->
                     <div class="hidden items-center justify-center md:col-start-2 md:flex">
                         <i class="fas fa-arrow-right text-3xl text-gray-400"></i>
                     </div>
 
-                    <!-- Step 3 -->
                     <div class="text-center md:col-start-3">
                         <div
                             class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-purple-600 text-2xl font-bold text-white">
@@ -205,7 +183,6 @@
             </div>
         </section>
 
-        <!-- Demo Section -->
         <section class="bg-white py-20">
             <div class="container mx-auto px-4">
                 <div class="mx-auto max-w-4xl text-center">
@@ -216,7 +193,6 @@
                     </p>
 
                     <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-                        <!-- Supervisor Demo -->
                         <div class="rounded-xl border border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-100 p-8">
                             <div
                                 class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-blue-600 text-white">
@@ -235,7 +211,6 @@
                             </a>
                         </div>
 
-                        <!-- Staff Demo -->
                         <div class="rounded-xl border border-green-200 bg-gradient-to-br from-green-50 to-emerald-100 p-8">
                             <div
                                 class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-green-600 text-white">
@@ -272,43 +247,10 @@
             </div>
         </section>
 
-        <!-- Contact/Footer Section -->
-        <section class="gradient-bg py-16 text-white">
-            <div class="container mx-auto px-4">
-                <div class="text-center">
-                    <h2 class="mb-6 text-3xl font-bold">Siap Memulai?</h2>
-                    <p class="mx-auto mb-8 max-w-2xl text-xl text-blue-100">
-                        Tingkatkan efisiensi manajemen log harian pegawai dengan sistem yang modern dan terintegrasi.
-                    </p>
-
-                    <div class="mb-12 flex flex-col justify-center gap-4 sm:flex-row">
-                        <a href="{{ route('login') }}"
-                            class="inline-flex items-center rounded-lg bg-white px-8 py-4 font-semibold text-indigo-600 shadow-lg transition duration-300 hover:bg-gray-100">
-                            <i class="fas fa-rocket mr-3"></i>
-                            Mulai Sekarang
-                        </a>
-                    </div>
-
-                    <div class="border-t border-blue-400 pt-8">
-                        <div class="flex flex-col items-center justify-between md:flex-row">
-                            <div class="mb-4 flex items-center space-x-3 md:mb-0">
-                                <i class="fas fa-clipboard-list text-2xl"></i>
-                                <span class="text-xl font-semibold">Daily Log System</span>
-                            </div>
-
-                            <div class="text-sm text-blue-200">
-                                © {{ date('Y') }} Pemerintah Daerah X. Dikembangkan dengan ❤️ untuk efisiensi kerja.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>
 
     @push('scripts')
         <script>
-            // Smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -322,7 +264,6 @@
                 });
             });
 
-            // Add animation on scroll
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
@@ -337,7 +278,6 @@
                 });
             }, observerOptions);
 
-            // Observe elements for animation
             document.querySelectorAll('.shadow-lg, .shadow-xl').forEach(el => {
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(20px)';

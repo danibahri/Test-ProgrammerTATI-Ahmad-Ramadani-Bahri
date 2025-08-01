@@ -4,7 +4,6 @@
 
 @section('content')
     <div class="mt-14 space-y-6 p-4 sm:ml-64">
-        <!-- Header -->
         <div class="rounded-lg bg-white p-6 shadow">
             <div class="flex items-center space-x-3">
                 <a href="{{ route('daily-log.index') }}" class="text-indigo-600 hover:text-indigo-500">
@@ -17,13 +16,11 @@
             </div>
         </div>
 
-        <!-- Form -->
         <div class="rounded-lg bg-white shadow">
             <form method="POST" action="{{ route('daily-log.store') }}" enctype="multipart/form-data" class="space-y-6 p-6">
                 @csrf
 
                 <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-                    <!-- Log Date -->
                     <div>
                         <label for="log_date" class="mb-2 block text-sm font-medium text-gray-700">
                             Tanggal <span class="text-red-500">*</span>
@@ -36,7 +33,6 @@
                         @enderror
                     </div>
 
-                    <!-- Attachment -->
                     <div>
                         <label for="attachment" class="mb-2 block text-sm font-medium text-gray-700">
                             Lampiran (Opsional)
@@ -50,7 +46,6 @@
                     </div>
                 </div>
 
-                <!-- Activity Description -->
                 <div>
                     <label for="activity_description" class="mb-2 block text-sm font-medium text-gray-700">
                         Deskripsi Aktivitas <span class="text-red-500">*</span>
@@ -64,7 +59,6 @@
                     <p class="mt-1 text-sm text-gray-500">Maksimal 1000 karakter</p>
                 </div>
 
-                <!-- Submit Buttons -->
                 <div class="flex items-center justify-end space-x-3 border-t border-gray-200 pt-6">
                     <a href="{{ route('daily-log.index') }}"
                         class="rounded-md border border-gray-300 px-4 py-2 text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
@@ -79,7 +73,6 @@
             </form>
         </div>
 
-        <!-- Information Box -->
         <div class="rounded-lg border border-blue-200 bg-blue-50 p-4">
             <div class="flex items-start">
                 <i class="fas fa-info-circle mr-3 mt-1 text-blue-500"></i>
@@ -98,14 +91,12 @@
 
     @push('scripts')
         <script>
-            // Auto-resize textarea
             const textarea = document.getElementById('activity_description');
             textarea.addEventListener('input', function() {
                 this.style.height = 'auto';
                 this.style.height = this.scrollHeight + 'px';
             });
 
-            // Character counter
             textarea.addEventListener('input', function() {
                 const maxLength = 1000;
                 const currentLength = this.value.length;
@@ -129,11 +120,10 @@
                 }
             });
 
-            // File size validation
             document.getElementById('attachment').addEventListener('change', function() {
                 const file = this.files[0];
                 if (file) {
-                    const maxSize = 2 * 1024 * 1024; // 2MB
+                    const maxSize = 2 * 1024 * 1024;
                     if (file.size > maxSize) {
                         alert('Ukuran file terlalu besar. Maksimal 2MB.');
                         this.value = '';

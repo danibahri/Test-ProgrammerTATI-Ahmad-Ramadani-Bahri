@@ -4,7 +4,6 @@
 
 @section('content')
     <div class="mt-14 space-y-6 p-4 sm:ml-64">
-        <!-- Welcome Header -->
         <div class="rounded-lg bg-white p-6 shadow">
             <div class="flex items-center justify-between">
                 <div>
@@ -18,9 +17,7 @@
             </div>
         </div>
 
-        <!-- Statistics Cards -->
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <!-- My Log Stats -->
             <div class="rounded-lg bg-blue-500 p-6 text-white shadow">
                 <div class="flex items-center justify-between">
                     <div>
@@ -62,7 +59,6 @@
             </div>
         </div>
 
-        <!-- Supervisor Stats (if applicable) -->
         @if ($subordinateStats)
             <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
                 <div class="rounded-lg bg-indigo-500 p-6 text-white shadow">
@@ -98,7 +94,6 @@
         @endif
 
         <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-            <!-- Recent Logs -->
             <div class="rounded-lg bg-white shadow">
                 <div class="border-b border-gray-200 p-6">
                     <div class="flex items-center justify-between">
@@ -140,7 +135,6 @@
                 </div>
             </div>
 
-            <!-- Recent Subordinate Logs (for verification) -->
             @if ($recentSubordinateLogs && $recentSubordinateLogs->count() > 0)
                 <div class="rounded-lg bg-white shadow">
                     <div class="border-b border-gray-200 p-6">
@@ -172,7 +166,6 @@
                     </div>
                 </div>
             @else
-                <!-- Quick Actions -->
                 <div class="rounded-lg bg-white shadow">
                     <div class="border-b border-gray-200 p-6">
                         <h2 class="text-lg font-semibold text-gray-900">Aksi Cepat</h2>
@@ -204,7 +197,6 @@
             @endif
         </div>
 
-        <!-- Monthly Chart -->
         @if ($monthlyData->count() > 0)
             <div class="rounded-lg bg-white shadow">
                 <div class="border-b border-gray-200 p-6">

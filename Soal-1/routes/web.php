@@ -22,7 +22,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::get('/profile', function () {
-        return redirect()->back()->with('warning', 'Mohon maaf, halaman profil belum tersedia.');
+        return view('pages.profile');
     })->name('profile');
 
     // Daily Log CRUD

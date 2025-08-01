@@ -4,7 +4,6 @@
 
 @section('content')
     <div class="mt-14 space-y-6 p-4 sm:ml-64">
-        <!-- Header -->
         <div class="rounded-lg bg-white p-6 shadow">
             <div class="flex items-center justify-between">
                 <div>
@@ -19,7 +18,6 @@
             </div>
         </div>
 
-        <!-- Filters and Search -->
         <div class="rounded-lg bg-white p-6 shadow">
             <form method="GET" action="{{ route('daily-log.index') }}" class="grid grid-cols-1 gap-4 md:grid-cols-4">
                 <div>
@@ -55,7 +53,6 @@
             </form>
         </div>
 
-        <!-- Daily Logs List -->
         <div class="rounded-lg bg-white shadow">
             @if ($logs->count() > 0)
                 <div class="overflow-x-auto">
@@ -146,7 +143,6 @@
                     </table>
                 </div>
 
-                <!-- Pagination -->
                 <div class="border-t border-gray-200 px-6 py-4">
                     {{ $logs->links() }}
                 </div>

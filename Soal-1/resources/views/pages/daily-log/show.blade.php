@@ -4,7 +4,6 @@
 
 @section('content')
     <div class="mt-14 space-y-6 p-4 sm:ml-64">
-        <!-- Header -->
         <div class="rounded-lg bg-white p-6 shadow">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-3">
@@ -29,11 +28,9 @@
             </div>
         </div>
 
-        <!-- Log Details -->
         <div class="rounded-lg bg-white shadow">
             <div class="p-6">
                 <div class="mb-6 grid grid-cols-1 gap-6 md:grid-cols-2">
-                    <!-- Date -->
                     <div>
                         <label class="mb-2 block text-sm font-medium text-gray-700">Tanggal</label>
                         <div class="rounded-md bg-gray-50 p-3">
@@ -45,7 +42,6 @@
                         </div>
                     </div>
 
-                    <!-- Status -->
                     <div>
                         <label class="mb-2 block text-sm font-medium text-gray-700">Status</label>
                         <div class="rounded-md bg-gray-50 p-3">
@@ -61,7 +57,6 @@
                         </div>
                     </div>
 
-                    <!-- Created At -->
                     <div>
                         <label class="mb-2 block text-sm font-medium text-gray-700">Dibuat Pada</label>
                         <div class="rounded-md bg-gray-50 p-3">
@@ -72,7 +67,6 @@
                         </div>
                     </div>
 
-                    <!-- Updated At -->
                     @if ($dailyLog->updated_at != $dailyLog->created_at)
                         <div>
                             <label class="mb-2 block text-sm font-medium text-gray-700">Terakhir Diupdate</label>
@@ -86,7 +80,6 @@
                     @endif
                 </div>
 
-                <!-- Activity Description -->
                 <div class="mb-6">
                     <label class="mb-2 block text-sm font-medium text-gray-700">Deskripsi Aktivitas</label>
                     <div class="rounded-md border-l-4 border-indigo-500 bg-gray-50 p-4">
@@ -95,7 +88,6 @@
                     </div>
                 </div>
 
-                <!-- Attachment -->
                 @if ($dailyLog->attachment)
                     <div>
                         <label class="mb-2 block text-sm font-medium text-gray-700">Lampiran</label>
@@ -146,7 +138,6 @@
             </div>
         </div>
 
-        <!-- Supervisor Information -->
         @if ($dailyLog->user->supervisor)
             <div class="rounded-lg bg-white shadow">
                 <div class="p-6">
@@ -168,7 +159,6 @@
             </div>
         @endif
 
-        <!-- Action Buttons -->
         @if ($dailyLog->user_id == auth()->id())
             <div class="flex justify-center space-x-4">
                 @if ($dailyLog->status == 'pending')

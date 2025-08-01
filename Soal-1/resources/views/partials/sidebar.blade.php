@@ -56,7 +56,8 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100">
+                <a href="#" id="user-management"
+                    class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor"
                         class="h-6 w-6 text-gray-500 transition duration-75 group-hover:text-gray-900">
@@ -70,3 +71,10 @@
         </ul>
     </div>
 </aside>
+
+<script>
+    document.getElementById('user-management').addEventListener('click', function(event) {
+        event.preventDefault();
+        alert('Fitur manajemen pengguna belum tersedia.');
+    });
+</script>
