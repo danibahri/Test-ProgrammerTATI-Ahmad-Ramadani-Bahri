@@ -167,3 +167,29 @@ npm run build
 -   id, user_id, log_date
 -   activity_description, status, attachment
 -   timestamps
+
+### UI
+
+#### Halaman Utama
+
+![landing-page](./public/front-end/landing-page.png)
+
+#### Halaman Login
+
+![login](./public/front-end/login.png)
+
+#### Halaman Dashboard
+
+![dashboard](./public/front-end/dashboard.png)
+![chart](./public/front-end/chart.png)
+
+#### Halaman Log Harian
+
+![log](./public/front-end/log.png)
+![detail-log](./public/front-end/detail-log.png)
+![create-log](./public/front-end/create-log.png)
+
+#### Halaman Verifikasi Log (oleh atasan)
+
+![verification-log](./public/front-end/verification-log.png)
+![confirm-log](./public/front-end/confirm-verification.png)
