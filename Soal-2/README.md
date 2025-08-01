@@ -61,10 +61,10 @@ DB_USERNAME=username
 DB_PASSWORD=password
 ```
 
-6. Jalankan migrasi database
+6. Import SQL yang tersedia di folder database
 
 ```bash
-php artisan migrate
+wilayah.sql
 ```
 
 7. Jalankan aplikasi
@@ -83,6 +83,16 @@ php artisan serve
 | nama  | string  | Nama wilayah/provinsi |
 
 _Note: Tabel ini tidak menggunakan timestamps (created_at, updated_at)_
+
+### Endpoint
+
+| endpoint                          | method    |
+| --------------------------------- | --------- |
+| `127.0.0.1:8000/api/provisi`      | GET all   |
+| `127.0.0.1:8000/api/provisi/{id}` | GET by ID |
+| `127.0.0.1:8000/api/provisi`      | POST      |
+| `127.0.0.1:8000/api/provisi/{id}` | PUT       |
+| `127.0.0.1:8000/api/provisi/{id}` | DELETE    |
 
 ## API Documentation
 
@@ -120,6 +130,8 @@ Mendapatkan semua data wilayah
 }
 ```
 
+![get-all](./public/image/get-all.png)
+
 #### 2. GET /provinsi/{id}
 
 Mendapatkan detail wilayah berdasarkan ID
@@ -147,6 +159,9 @@ Mendapatkan detail wilayah berdasarkan ID
     "message": "ID Wilayah tidak ditemukan"
 }
 ```
+
+![get-byId](./public/image/get-byId.png)
+![get-byId](./public/image/get-byIdError.png)
 
 #### 3. POST /provinsi
 
@@ -204,6 +219,8 @@ Membuat data wilayah baru
 }
 ```
 
+![post](./public/image/post.png)
+
 #### 4. PUT/PATCH /provinsi/{id}
 
 Mengupdate data wilayah
@@ -239,6 +256,8 @@ Mengupdate data wilayah
 }
 ```
 
+![PUT](./public/image/put.png)
+
 #### 5. DELETE /provinsi/{id}
 
 Menghapus data wilayah
@@ -263,6 +282,8 @@ Menghapus data wilayah
 }
 ```
 
+![delete](./public/image/delete.png)
+
 ## Struktur Proyek
 
 ```
@@ -276,31 +297,4 @@ app/
 │   └── Wilayah.php                  # Model Eloquent untuk wilayah
 routes/
 └── api.php                          # Route API definitions
-```
-
-## Testing
-
-Anda dapat menggunakan tools seperti Postman, Insomnia, atau curl untuk testing API:
-
-### Contoh menggunakan curl:
-
-```bash
-# GET semua wilayah
-curl -X GET http://localhost:8000/api/provinsi
-
-# GET wilayah by ID
-curl -X GET http://localhost:8000/api/provinsi/11
-
-# POST create wilayah baru
-curl -X POST http://localhost:8000/api/provinsi \
-  -H "Content-Type: application/json" \
-  -d '{"id":"99","nama":"TEST PROVINSI"}'
-
-# PUT update wilayah
-curl -X PUT http://localhost:8000/api/provinsi/99 \
-  -H "Content-Type: application/json" \
-  -d '{"nama":"TEST PROVINSI UPDATED"}'
-
-# DELETE wilayah
-curl -X DELETE http://localhost:8000/api/provinsi/99
 ```
