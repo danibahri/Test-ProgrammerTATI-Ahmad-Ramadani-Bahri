@@ -74,7 +74,3 @@ Output yang di hasilkan dengan mengirim response :
 `$perilaku = ‘diatas ekspektasi’`
 ![output](./public/Soal-3/output.png)
 ![output](./public/Soal-3/output-2.png)
-
----
-
-# Soal 4
