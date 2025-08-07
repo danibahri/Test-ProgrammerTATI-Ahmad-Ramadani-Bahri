@@ -10,9 +10,6 @@ use Carbon\Carbon;
 
 class SampleDataSeeder extends Seeder
 {
-    /**
-     * Run the database seeders.
-     */
     public function run(): void
     {
         $kepalaDinas = User::create([
