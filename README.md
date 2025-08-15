@@ -1,7 +1,5 @@
 # Test-Programmer
 
-Pada kesempatan kali ini, saya diberikan kesempatan untuk mengikuti proses lanjutan seleksi yang diselenggarakan oleh PT TATI dalam rangka pelaksanaan magang (internship).
-
 Tes yang diberikan telah saya bagi menjadi 4 bagian. Masing-masing bagian telah saya kerjakan dengan sebaik-baiknya disertai dokumentasi yang tercantum pada setiap soal, mulai dari Soal 1 hingga Soal 4.
 
 Soal 1:
